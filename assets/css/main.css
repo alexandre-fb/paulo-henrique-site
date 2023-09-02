@@ -11,5 +11,24 @@ body {
     width: 100%;
 }
 
+/* SLIDER */
+.carousel {
+    width: 100%;
+}
 
+.carousel__icon {
+    fill: #506F7F!important;
+}
 
+.carousel__pagination-button::after {
+    height: 16px!important;
+    width: 16px!important;
+    border: 1px solid #506F7F;
+    background-color: transparent!important;
+    transition: 300ms ease-in-out;
+}
+
+.carousel__pagination-button--active::after {
+    background-color: #506f7f5c!important;
+    transform: rotate(-90deg);
+}
