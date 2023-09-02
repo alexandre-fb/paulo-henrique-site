@@ -1,9 +1,18 @@
 <template>
-  <div>
+  <header>
     <Header />
-    <Banner />
-    <Sobre />
-  </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <Banner />
+    </section>
+
+    <section id="sobre">
+      <Sobre />
+    </section>
+  </main>
+
 </template>
 
 <script>
