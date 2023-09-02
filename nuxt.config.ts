@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    'vue3-carousel-nuxt',
     '@nuxtjs/tailwindcss',
     [
       '@nuxtjs/google-fonts', 
