@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     colors: {
       'primary': '#506F7F',
+      'primary-50': '#506F7F50',
       'secondary': '#212932',
       'secondary-75': 'rgba(33, 41, 50, .75)',
       'tertiary': '#ff49db',
@@ -17,6 +18,7 @@ module.exports = {
       'text-color': '#fff',
       'white': '#fff',
       'black': '#000',
+      'transparent': 'transparent',
     },
     fontFamily: {
       text: ['Open Sans', 'sans-serif'],
