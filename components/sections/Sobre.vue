@@ -21,7 +21,7 @@
               alt="Textura de mandeira" class="w-full h-[100%] object-cover" />
           </picture>
 
-          <!-- Retanfulo com borda no fundo -->
+          <!-- Retangulo com borda no fundo -->
           <div class="absolute  border border-primary w-full max-w-[60%] h-96"></div>
         </div>
 
