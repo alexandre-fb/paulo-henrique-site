@@ -39,7 +39,7 @@
         >
           <ul class="flex-col items-center gap-11">
             <li class="relative" v-for="item in menuItems" :key="item.value">
-              <a href="" class="menu-desktop__link text-text-color">{{
+              <a :href="item.link" class="menu-desktop__link text-text-color">{{
                 item.label
               }}</a>
             </li>
