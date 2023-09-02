@@ -13,7 +13,7 @@
       <!-- MENU DESKTOP -->
       <ul class="items-center gap-11 hidden lg:flex">
         <li class="relative" v-for="item in menuItems" :key="item.value">
-          <a href="" class="menu-desktop__link text-text-color">{{
+          <a :href="item.link" class="menu-desktop__link text-text-color">{{
             item.label
           }}</a>
         </li>
@@ -59,27 +59,27 @@ export default {
         {
           label: "Início",
           value: "inicio",
-          link: "inicio",
+          link: "#inicio",
         },
         {
           label: "Sobre",
           value: "sobre",
-          link: "sobre",
+          link: "#sobre",
         },
         {
           label: "Projetos",
           value: "projetos",
-          link: "projetos",
+          link: "#projetos",
         },
         {
           label: "Skills",
           value: "skills",
-          link: "skills",
+          link: "#skills",
         },
         {
           label: "Contato",
           value: "contato",
-          link: "contato",
+          link: "#contato",
         },
       ],
       menuMobileIsOpen: false,
