@@ -27,6 +27,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'projetos-bg': "linear-gradient(to right bottom, rgba(33, 41, 50, .75), rgba(33, 41, 50, .75)), url('/assets/images/projetos-bg-desktop.webp')",
+        'contato-bg': "url('/assets/images/contato-bg.webp')",
       },
     },
   },
