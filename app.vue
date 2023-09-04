@@ -15,6 +15,10 @@
     <section id="projetos">
       <Projetos />
     </section>
+
+    <section id="contato">
+      <Contato />
+    </section>
   </main>
 
 </template>
@@ -23,12 +27,14 @@
 import Banner from './components/sections/Banner.vue';
 import Sobre from './components/sections/Sobre.vue';
 import Projetos from './components/sections/Projetos.vue';
+import Contato from './components/sections/Contato.vue';
 
 export default {
   components: {
     Banner,
     Sobre,
-    Projetos
+    Projetos,
+    Contato
   },
 }
 </script>
