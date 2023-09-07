@@ -11,8 +11,10 @@ module.exports = {
     colors: {
       'primary': '#506F7F',
       'primary-50': '#506F7F50',
+      'primary-75': '#506F7F75',
       'secondary': '#212932',
       'secondary-75': 'rgba(33, 41, 50, .75)',
+      'secondary-95': 'rgba(33, 41, 50, .95)',
       'tertiary': '#ff49db',
       'quaternary': '#ff7849',
       'text-color': '#fff',
