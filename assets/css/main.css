@@ -16,6 +16,7 @@ body {
     width: 100%;
 }
 
+/* SLIDER SESSAO PROJETOS */
 .carousel__icon {
     fill: #506F7F!important;
 }
@@ -30,5 +31,23 @@ body {
 
 .carousel__pagination-button--active::after {
     background-color: #506f7f5c!important;
+    transform: rotate(-90deg);
+}
+
+/* SLIDER MODAL PROJETOS DETALHES */
+.modal__detalhes-projetos .carousel__icon {
+    fill: #fff!important;
+}
+
+.modal__detalhes-projetos .carousel__pagination-button::after {
+    height: 16px!important;
+    width: 16px!important;
+    border: 1px solid #fff;
+    background-color: transparent!important;
+    transition: 300ms ease-in-out;
+}
+
+.modal__detalhes-projetos .carousel__pagination-button--active::after {
+    background-color: #ffffff5c!important;
     transform: rotate(-90deg);
 }
