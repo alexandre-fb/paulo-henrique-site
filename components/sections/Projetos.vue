@@ -29,11 +29,16 @@
           <div class="navigation__wrapper">
             <Navigation />
           </div>
-          <Pagination />
+
+          <div class="mt-16">
+            <Pagination />
+          </div>
         </template>
       </Carousel>
     </div>
   </div>
+
+  <ModalProjetos />
 </template>
   
 <script>
@@ -42,6 +47,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 import SectionTitle from '../SectionTitle.vue';
 import IconDownload from '../icons/IconDownload.vue';
+import ModalProjetos from '../ModalProjetos.vue';
 
 export default {
   components: {
@@ -50,7 +56,8 @@ export default {
     Pagination,
     Navigation,
     SectionTitle,
-    IconDownload
+    IconDownload,
+    ModalProjetos
   },
   data() {
     return {
