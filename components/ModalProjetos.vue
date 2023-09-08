@@ -79,8 +79,9 @@ export default {
         max-height: 100%;
     }
 
-    .modal__detalhes-projetos .carousel__prev, .carousel__prev, .carousel__next  {
-        bottom: -22px;
+    .modal__detalhes-projetos .carousel__prev,
+    .modal__detalhes-projetos .carousel__next  {
+        bottom: -52px;
         top: initial;
     }
 </style>
