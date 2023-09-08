@@ -22,8 +22,8 @@
         >
           Paulo Henrique
         </h2>
-        <h3 class="text-text-color text-2xl lg:text-3xl font-text font-light mb-4">
-          Móveis e Arquitetura
+        <h3 class="text-text-color text-3xl lg:text-3xl font-text font-light mb-4">
+          Portfólio de Projetos
         </h3>
         <span class="absolute block h-[2px] w-[30%] bg-primary -bottom-1"></span>
       </div>
