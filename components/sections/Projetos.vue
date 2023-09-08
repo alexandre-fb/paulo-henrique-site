@@ -1,25 +1,25 @@
 <template>
   <div
     class="relative flex justify-center items-center w-full min-h-screen px-3 py-20 h-full bg-projetos-bg bg-no-repeat bg-cover bg-fixed font-text bg-secondary">
-    <!-- class="relative flex justify-center items-center w-full min-h-screen px-3 py-20 h-full bg-[url('/assets/images/projetos-bg-desktop.webp')] bg-no-repeat bg-cover bg-fixed font-text bg-secondary border-box"> -->
-
-
-    <!-- <picture class="absolute w-full h-[100%]">
-      <source media="(max-width: 769px)" srcset="~/assets/images/projetos-bg-mobile.webp" />
-      <img src="~/assets/images/projetos-bg-desktop.webp" alt="Textura de mandeira"
-        class="w-full h-[100%] object-cover opacity-20" />
-    </picture> -->
     <div class="gap-7 w-full max-w-7xl">
 
       <div class="mb-16">
         <SectionTitle title="Projetos" showLine />
       </div>
 
-      <Carousel v-bind="settings" :breakpoints="breakpoints" :autoplay="4000">
-        <Slide v-for="slide in 10" :key="slide">
-          <div class="projetos__slide-wrapper relative w-80 h-80 py-12 mb-5">
+      <Carousel 
+        v-bind="settings" 
+        :breakpoints="breakpoints" 
+        :autoplay="false" 
+        @slide-end="updateActiveSlide"
+      >
+        <Slide v-for="(slide, index) in slidesData" :key="slide.name + index">
+          <div  @click="openModal(index)" class="projetos__slide-wrapper relative flex flex-col items-center w-80 h-80 py-12 mb-5 cursor-pointer">
+
             <img src="~/assets/images/projetos/projeto-1/projeto_1.webp" alt="Projeto 1"
               class="relative z-10 w-full h-[100%] object-cover">
+
+            <button class="button--saiba-mais absolute text-xs text-text-color font-text bottom-3 transition-opacity ">Veja mais</button>
             <!-- Retangulo com borda no fundo -->
             <div class="background-line"></div>
           </div>
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <ModalProjetos />
+  <ModalProjetos :modal_is_open="modalIsOpen" @update:modal_is_open="updateModalIsOpen" />
 </template>
   
 <script>
@@ -61,6 +61,19 @@ export default {
   },
   data() {
     return {
+      modalIsOpen: false,
+      activeSlideIndex: 0,
+      slidesData: [
+        {
+          name: 'Projeto 1',
+        },
+        {
+          name: 'Projeto 2',
+        },
+        {
+          name: 'Projeto 3',
+        }
+      ],
       settings: {
         itemsToShow: 1,
         snapAlign: 'center',
@@ -83,12 +96,48 @@ export default {
       }
     }
   },
-  methods: {},
+  methods: {
+    openModal(indexClickedSlide) {
+      console.log('open')
+      console.log('index', indexClickedSlide)
+      if(indexClickedSlide === this.activeSlideIndex)
+      this.modalIsOpen = true
+    },
+    updateModalIsOpen(value) {
+      this.modalIsOpen = value;
+    },
+    updateActiveSlide(data) {
+      console.log('slide-start', data)
+      this.activeSlideIndex = data.currentSlideIndex
+    },
+  },
 };
 </script>
   
 <style scoped>
 
+/*HOVER SLIDE ATIVO*/
+.carousel__slide--active .projetos__slide-wrapper img:hover {
+  transform: scale(1.12 );
+}
+
+/*BOTAO SAIBA MAIS*/
+.projetos__slide-wrapper .button--saiba-mais {
+  opacity: 0;
+}
+
+.carousel__slide--active .projetos__slide-wrapper:hover .button--saiba-mais {
+  opacity: 1
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide--active .projetos__slide-wrapper .button--saiba-mais {
+    opacity: 1;
+  }
+}
+
+
+/*SLIDER*/
 .carousel__slide {
   opacity: .8!important;
 }
