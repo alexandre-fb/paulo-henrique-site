@@ -1,5 +1,6 @@
 <template>
   <div class="bg-secondary">
+
     <div
       class="flex justify-center items-center w-full min-h-screen px-3 py-20 h-full bg-contato-bg bg-cover font-text border-box">
   
@@ -7,8 +8,8 @@
   
         <!-- NOME -->
         <div class="flex flex-col items-center">
-          <h2 class="text-text-color text-5xl font-title font-light mb-2">Paulo Henrique</h2>
-          <h3 class="text-text-color text-2xl font-text font-light">Móveis e Arquitetura</h3>
+          <h2 class="text-text-color text-5xl text-center font-title font-light mb-2">Paulo Henrique</h2>
+          <!-- <h3 class="text-text-color text-2xl font-text font-light">Móveis e Arquitetura</h3> -->
         </div>
   
         <div class="w-24 h-[2px] bg-primary mx-auto my-7"></div>
