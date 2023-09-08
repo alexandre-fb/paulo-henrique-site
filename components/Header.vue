@@ -5,10 +5,10 @@
   >
     <nav class="relative flex items-center justify-center w-full max-w-7xl">
       <!-- LOGO -->
-      <div class="absolute left-0 text-text-color">
+      <!-- <div class="absolute left-0 text-text-color">
         <h3 class="text-xl mb-0 font-title">Paulo Henrique</h3>
         <span class="text-xs font-text">Móveis e Arquitetura</span>
-      </div>
+      </div> -->
 
       <!-- MENU DESKTOP -->
       <ul class="items-center gap-11 hidden lg:flex">
@@ -34,7 +34,7 @@
 
         <!-- LINKS MOBILE -->
         <div
-          class="absolute z-50 bg-secondary w-60 right-0 top-10 p-5 text-right transition-all duration-200 ease-in-out"
+          class="absolute z-50 bg-secondary w-60 right-0 top-10 p-5 text-right h-screen transition-all duration-200 ease-in-out"
           :class="menuMobileIsOpen ? 'linksMobileVisible' : 'linksMobileHidden'"
         >
           <ul class="flex-col items-center gap-11">
