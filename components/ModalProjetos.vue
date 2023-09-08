@@ -1,13 +1,10 @@
 <template>
-    <Modal>
+    <Modal :modal_is_open="modal_is_open" @update:modal_is_open="updateModalIsOpen">
         <div class="modal__detalhes-projetos">
             <Carousel v-bind="settings">
                 <Slide v-for="imageName in imagesNames" :key="imageName">
                     <div class="w-full h-[100%] max-h-[700px]">
-    
                         <img :src="`/images/projetos/projeto-1/detalhes/${imageName}.webp`" alt="Projeto 1" class="relative z-10 w-full h-[100%] object-contain">
-                        
-                        <h1>{{ imageName }}</h1>
                     </div>
                 </Slide>
     
@@ -38,6 +35,12 @@ export default {
         Pagination,
         Navigation
     },
+    props: {
+        modal_is_open: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             imagesNames: ['p1-detalhe-1', 'p1-detalhe-2', 'p1-detalhe-3'],
@@ -51,19 +54,32 @@ export default {
     },
     methods: {
         closeModal(event) {
-            this.modalIsOpen = false;
+            this.$emit('closeModal:modal_is_open', false);
+        },
+        updateModalIsOpen(value) {
+            this.modalIsOpen = value;
+            this.$emit('update:modal_is_open', value); 
         }
     }
 }
 </script>
   
 <style>
-    .carousel {
+    .modal__detalhes-projetos .carousel {
         margin-top: 15px;
         max-height: 730px;
+        height: 75vh;
     }
 
-    .carousel__prev, .carousel__prev, .carousel__next  {
+    .modal__detalhes-projetos .carousel__viewport {
+        height: 100%;
+    }
+
+    .modal__detalhes-projetos .carousel__track {
+        max-height: 100%;
+    }
+
+    .modal__detalhes-projetos .carousel__prev, .carousel__prev, .carousel__next  {
         bottom: -22px;
         top: initial;
     }
