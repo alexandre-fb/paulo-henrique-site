@@ -16,6 +16,10 @@
       <Projetos />
     </section>
 
+    <section id="skills">
+      <Skills />
+    </section>
+
     <section id="contato">
       <Contato />
     </section>
@@ -27,6 +31,7 @@
 import Banner from './components/sections/Banner.vue';
 import Sobre from './components/sections/Sobre.vue';
 import Projetos from './components/sections/Projetos.vue';
+import Skills from './components/sections/Skills.vue';
 import Contato from './components/sections/Contato.vue';
 
 export default {
@@ -34,6 +39,7 @@ export default {
     Banner,
     Sobre,
     Projetos,
+    Skills,
     Contato
   },
 }
